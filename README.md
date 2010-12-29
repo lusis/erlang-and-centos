@@ -3,21 +3,21 @@ After spending more time than I wanted attempting to deal with building RPMS of 
 
 ## Why not a custom RPM?
 So why did I do it instead of building a custom RPM? Look at this list of requirements:
-
-	* Riak - Erlang R13B04 minimum
-	* CouchDB 1.0.1 - Curl 7.2 minimum
+* Riak - Erlang R13B04 minimum
+* CouchDB 1.0.1 - Curl 7.2 minimum
 
 Why are those a problem?
-	* EPEL only ships with Erlang 12.
-	* There are no Curl 7.2 packages for CentOS 5.5 because it breaks the OS packages.
-	* Catch-22
+* EPEL only ships with Erlang 12.
+* There are no Curl 7.2 packages for CentOS 5.5 because it breaks the OS packages.
+
+Catch-22
 
 There have been various efforts to resolve all of this but I wanted a unified stack. If I wanted to run CouchDB on the same box as Riak, I damn well should be able to do so. Is it likely? Actually, yes...for our developers to test.
 
 For the record, RabbitMQ RPMS appear to work with the EPEL Erlang packages but again, unified stack. I WILL need to be running CouchDB and RabbitMQ on the same box for my Vogeler server.
 I could have swapped to Ubuntu 10.04.1 LTS but I'm not ready to start spreading out my distro usage just yet.
 
-So why not just use chef/puppet to build on the server directly? Idemopotence. That and spin up time. I'm building a system to autoscale itself here. I don't want to wait any longer than I have to for new instances.
+So why not just use chef/puppet to build on the server directly? Idempotence. That and spin up time. I'm building a system to autoscale itself here. I don't want to wait any longer than I have to for new instances.
 
 # Setup build environment
 *Please don't run these commands blindly. This is a log of what I did. I might have missed something.*
@@ -142,8 +142,8 @@ With the exception of riak, you need to untar the erlang and application tarball
 You can repeat your manual tests against the copied tarballs.
 
 # TODO
-Write the cookbooks for chef to distribute these and configure them.
-Consider how upgrades will work.
-Write a cookbook to actually do all of this for you ;)
-Create spec files for all of these? Would that be too meta?
+* Write the cookbooks for chef to distribute these and configure them.
+* Consider how upgrades will work.
+* Write a cookbook to actually do all of this for you ;)
+* Create spec files for all of these? Would that be too meta?
 
