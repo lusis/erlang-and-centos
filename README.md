@@ -3,12 +3,14 @@ After spending more time than I wanted attempting to deal with building RPMS of 
 
 ## Why not a custom RPM?
 So why did I do it instead of building a custom RPM? Look at this list of requirements:
-* Riak - Erlang R13B04 minimum
-* CouchDB 1.0.1 - Curl 7.2 minimum
+
+- Riak - Erlang R13B04 minimum
+- CouchDB 1.0.1 - Curl 7.2 minimum
 
 Why are those a problem?
-* EPEL only ships with Erlang 12.
-* There are no Curl 7.2 packages for CentOS 5.5 because it breaks the OS packages.
+
+- EPEL only ships with Erlang 12.
+- There are no Curl 7.2 packages for CentOS 5.5 because it breaks the OS packages.
 
 Catch-22
 
@@ -142,8 +144,8 @@ With the exception of riak, you need to untar the erlang and application tarball
 You can repeat your manual tests against the copied tarballs.
 
 # TODO
-* Write the cookbooks for chef to distribute these and configure them.
-* Consider how upgrades will work.
-* Write a cookbook to actually do all of this for you ;)
-* Create spec files for all of these? Would that be too meta?
+- Write the cookbooks for chef to distribute these and configure them.
+- Consider how upgrades will work.
+- Write a cookbook to actually do all of this for you ;)
+- Create spec files for all of these? Would that be too meta?
 
