@@ -1,6 +1,8 @@
 # CentOS 5.5 Erlang Applications
 After spending more time than I wanted attempting to deal with building RPMS of various erlang applications on CentOS 5, I decided to skip packaging all together. The premise is that these applications will be managed from some CM tool like puppet or chef which will handle creating application users and writing configuration files. This just gets workable binaries on the system.
 
+*NOTE - Compiled packages are available under "Downloads". Filename contains a SHA256 sum for checksumming*
+
 ## Why not a custom RPM?
 So why did I do it instead of building a custom RPM? Look at this list of requirements:
 
